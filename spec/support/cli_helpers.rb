@@ -10,4 +10,8 @@ module CLIHelpers
     @announce_stderr = true
   end
 
+  def output_text
+    all_output.chomp
+  end
+
 end
