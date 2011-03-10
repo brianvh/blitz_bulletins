@@ -11,6 +11,12 @@ module BlitzBulletins
       readlines.each { |line| @list.push(topic_from_line(line)) }
     end
 
+    def self.load
+      topics = Topics.new
+      topics.parse_file
+      topics.list
+    end
+
     private
 
     def topic_from_line(line)
