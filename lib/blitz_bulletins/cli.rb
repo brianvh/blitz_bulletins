@@ -4,11 +4,25 @@ module BlitzBulletins
   class CLI < Thor
 
     desc "list", "List the Blitz Bulletin topics"
+    method_option :before, :type => :string, :aliases => '-b'
     def list
-      topics.each { |t| puts t }
+      topics.each do |t|
+        next if before?(t.date)
+        puts t
+      end
     end
 
     private
+
+    def before
+      return nil unless options[:before]
+      @before ||= Date.parse(options[:before])
+    end
+
+    def before?(date)
+      return false unless before
+      before == date ? true : before < date
+    end
 
     def topics
       BlitzBulletins.topics
