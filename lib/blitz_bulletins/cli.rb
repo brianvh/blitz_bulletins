@@ -7,7 +7,7 @@ module BlitzBulletins
     method_option :before, :type => :string, :aliases => '-b'
     def list
       topics.each do |t|
-        next if before?(t.date)
+        next if not_before?(t.date)
         puts t
       end
     end
@@ -19,7 +19,7 @@ module BlitzBulletins
       @before ||= Date.parse(options[:before])
     end
 
-    def before?(date)
+    def not_before?(date)
       return false unless before
       before == date ? true : before < date
     end
