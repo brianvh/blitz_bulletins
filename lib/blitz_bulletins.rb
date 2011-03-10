@@ -1,9 +1,9 @@
 require 'blitz_bulletins/cli'
+require 'blitz_bulletins/topics'
+require 'blitz_bulletins/topic'
 
 module BlitzBulletins
   @@topics = []
-
-  autoload :Topics, 'blitz_bulletins/topics'
 
   def self.load_topics
     return false unless @@topics.empty?
