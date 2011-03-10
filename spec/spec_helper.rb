@@ -1,4 +1,4 @@
-require 'bliz_bulletins'
+require 'blitz_bulletins'
 require 'rspec'
 
 support_path = File.expand_path(File.dirname(__FILE__) + "/support/**/*.rb")
