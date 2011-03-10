@@ -25,14 +25,26 @@ describe "Listing Blitz Bulletin topics" do
       end
     end
 
-    context "WHEN: we run `bb-topics list --before=1/15/2011`" do
+    context "WHEN: we run `bb-topics list --before=2/1/2011`" do
       before(:each) do
         run_simple('bb-topics list --before=2/1/2011')
       end
 
       context "THEN: the output should be" do
         it "topic-one: 01/01/2011" do
-          all_output.chomp.should == 'topic-one: 01/01/2011'
+          output_text.should == 'topic-one: 01/01/2011'
+        end
+      end
+    end
+
+    context "WHEN: we run `bb-topics list --after=2/1/2011`" do
+      before(:each) do
+        run_simple('bb-topics list --after=2/1/2011')
+      end
+
+      context "THEN: the output should be" do
+        it "topic-two: 02/01/2011" do
+          output_text.should == 'topic-two: 02/01/2011'
         end
       end
     end
