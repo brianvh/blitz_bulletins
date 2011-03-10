@@ -8,8 +8,8 @@ module BlitzBulletins
     method_option :after, :type => :string, :aliases => '-a'
     def list
       topics.each do |t|
-        next if not_before?(t.date)
-        next if not_after?(t.date)
+        next unless before?(t.date)
+        next unless after?(t.date)
         puts t
       end
     end
@@ -17,23 +17,23 @@ module BlitzBulletins
     private
 
     def before
-      return nil unless options[:before]
-      @before ||= Date.parse(options[:before])
-    end
-
-    def not_before?(date)
-      return false unless before
-      before == date ? true : before < date
+      @before ||= parse_date(options[:before])
     end
 
     def after
-      return nil unless options[:after]
-      @after ||= Date.parse(options[:after])
+      @after ||= parse_date(options[:after])
     end
 
-    def not_after?(date)
-      return false unless after
-      after == date ? false : after > date
+    def before?(date)
+      before.nil? ? true : date < before
+    end
+
+    def after?(date)
+      after.nil? ? true : date >= after
+    end
+
+    def parse_date(date)
+      date.nil? ? nil : Date.parse(date)
     end
 
     def topics
