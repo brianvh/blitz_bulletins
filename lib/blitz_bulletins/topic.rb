@@ -3,7 +3,7 @@ require 'date'
 module BlitzBulletins
 
   class Topic
-    attr_reader :name
+    attr_reader :name, :date
 
     def initialize(name=nil, date=Date.today)
       @name = name
@@ -14,8 +14,12 @@ module BlitzBulletins
       "#{@name}: #{short_date}"
     end
 
-    def date
-      @date.to_s
+    def before?(before)
+      before.nil? ? true : date < before
+    end
+
+    def after?(after)
+      after.nil? ? true : date >= after
     end
 
     def self.from_line(line)
