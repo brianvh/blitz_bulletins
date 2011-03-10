@@ -1,0 +1,3 @@
+module BlitzBulletins
+  # Your code goes here...
+end
