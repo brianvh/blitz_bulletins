@@ -14,6 +14,14 @@ module BlitzBulletins
       "#{@name}: #{short_date}"
     end
 
+    def before?(before)
+      before.nil? ? true : date < before
+    end
+
+    def after?(after)
+      after.nil? ? true : date >= after
+    end
+
     def self.from_line(line)
       pat = /^(...) +(\d+) +(\d\d:?\d\d) (.+)$/
       mon, day, yr_time, name = pat.match(line).to_a[1..-1]
