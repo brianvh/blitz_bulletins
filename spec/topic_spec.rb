@@ -20,7 +20,7 @@ describe BlitzBulletins::Topic do
 
       describe "#date" do
         it "returns today as the date" do
-          @topic.date.should == Date.today.to_s
+          @topic.date.should == Date.today
         end
       end
     end
