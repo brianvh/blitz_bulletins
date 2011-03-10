@@ -5,7 +5,7 @@ describe "Listing Blitz Bulletin topics" do
     before(:each) do
       topics_file = %{Jan  1 04:02 topic-one
         Jan  2 04:02 topic-two
-      }.gsub(/^ {8}/, '')
+        }.gsub(/^ {8}/, '')
       write_file("data/topics.txt", topics_file)
     end
 
@@ -17,6 +17,10 @@ describe "Listing Blitz Bulletin topics" do
       context "THEN: the output of the command" do
         it "should begin with 'topic-one: 01/01/2011'" do
           all_output.should match(/^topic-one: 01\/01\/2011/)
+        end
+
+        it "should end with 'topic-two: 01/02/2011'" do
+          all_output.should match(/topic-two: 01\/02\/2011$/)
         end
       end
     end
