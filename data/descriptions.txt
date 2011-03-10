@@ -1,0 +1,471 @@
+08-class-council:2008 Class Council
+09-class-council:2009 Class Council
+11-class-council:2011 Class Council
+12-class-council:2012 Class Council
+1972-society:1972 Society
+2010-class-council:2010 Class Council
+AAAS:African & African American Studies
+DHMC-public-affairs:DHMC Public Affairs
+DHMC.Blitz.News:DHMC Blitz News
+DHMC.New.Bulletin.Topics:DHMC New Bulletin Topics
+DHMC.WWW.News:DHMC WWW News
+DHMC.data-reporting:DHMC Data Reporting
+DHMC.ob-gyn:DHMC Obstetrics and Gynecology
+a-capella-update:A Cappella Update
+acad-skills-ctr:Academic Skills Center
+academic-advising:Academic Advising
+academic-info-sys:Computing - * Academic Computing *
+acct-payable:Accounts Payable
+active-minds:Active Minds at Dartmouth College
+addiction:Dartmouth Center on Addiction, Recovery & Education
+admin-comp:Computing - * Administrative Computing *
+admin-intern:Administrative Internships
+advisor-latino-hispanic:Advisor to Latino-Hispanic Students
+aegis:Aegis (Yearbook)
+affirm-act:Diversity and Equity
+africaso:AfriCaSo
+afro-amer-soc:Afro-American Society
+after-hours:After Hours
+al-nur:Al-Nur
+alum-rel:Alumni Relations
+alumni-magazine:Alumni Magazine
+amarna:Amarna Undergraduate Society
+amel:Asian and Middle Eastern Languages
+amel-asia:Asian Studies Program
+amnesty-internat:Amnesty International
+animal-welfare-group:Dartmouth Animal Welfare Group (DAWG)
+anthropology:Anthropology Department
+aporia:Aporia
+aquinas-house:Aquinas House - Catholic Student Center
+arabic:Arabic at Dartmouth College
+arctic-studies:Arctic Studies
+art-hist:Art History
+asgard:Asgard
+athletics-champs-life-skills:Athletics - CHAMPS Life Skills
+athletics-club-sports:Athletics - Club Sports
+athletics-facilities:Athletics-Facilities
+athletics-flip:Athletics-FLIP
+athletics-intramurals:Athletics-Intramurals
+athletics-pe:Athletics-Physical Education
+athletics-saac:Athletics - SAAC
+athletics-varsity-results:Athletics-Varsity Results
+auk-dartmouth:AUK - Dartmouth Program
+banner-proj:Computing - BANNER Project
+basement:The Basement - WebBlitz, DID, the Exchange
+benefits-council:College Benefits Council
+bi-gay-news:Dartmouth Rainbow Alliance/LBGT News
+big-brother-sister:Big Brother/Big Sister
+biology:Biology Department
+biomed-lib:Biomedical Libraries
+black-business-assoc:Dartmouth Black Business Association
+black-student-adv:Black Student Advising
+blitz-tips:Computing - BlitzMail
+bogglers:Dartmouth Union of Bogglers
+bonfire:Bonfire
+book-arts:Book Arts Workshop
+book-buddies:Book Buddies
+brain-imaging:Brain Imaging Lab - Research
+bridge-club:Bridge Club
+broadcast-updates:Dartmouth Broadcasting Updates
+buildings-grounds:FO&M Notices
+bull-topics:Computing - Bulletin Topics
+business-affairs:Risk Management and Insurance
+career-emp-svcs:Career Services
+career-graduate-advising:Scholarship/Fellowship Options
+career-svcs-winter-recruit:Career Services - Entry-level Jobs
+casual-thursday:Casual Thursday
+cbbc:CBBC - Computational Biology
+chabad:CHABAD: Jewish Student Organization
+chemistry:Chemistry Department
+chemistry-society:Dartmouth College Chemistry Society
+chess-club:Dartmouth Chess Club
+china-society:Dartmouth Chinese Culture Society
+chinese-student-scholar:Chinese Student and Scholar Association
+cl-affinities:Cluster - The Affinities
+cl-butterfield:Cluster - Russell Sage
+cl-choates:Cluster - The Choates
+cl-ewheelock:Cluster - East Wheelock
+cl-fayers:Cluster - The Fayerweathers
+cl-goldcoast:Cluster - Gold Coast
+cl-hitchcock:Cluster - Hitchcock
+cl-lodge:Cluter - The Lodge
+cl-massrow:Cluster - Mass Row
+cl-max-channing:Cluster - Maxwell/Channing Cox Apartments
+cl-mclaughlin:Cluster - McLaughlin
+cl-north:Cluster - North Hall
+cl-richardson:Cluster - Richardson
+cl-rip-wood-smith:Cluster - Ripley/Woodward/Smith
+cl-river:Cluster - Judge/French
+cl-top-newhamp:Cluster - New Hampshire
+cl-topliff:Cluter - Topliff
+cl-wheel-rich:Cluster - Wheeler
+classroom-tech:Computing - * Classroom Technology Services *
+climbing-gym:Climbing Gym
+club-dart-entrepreneurs:Club of Dartmouth Entrepreneurs
+cnrd:CNR@D REU Program
+coalition-for-life:Coalition for Life
+cognitive-neuroscience:Center for Cognitive Neuroscience
+col-committees:College Committees
+col-printing:Design, Printing & Mailing and Copy Center News
+collis-cafe:Collis Cafe
+collis-ctr:Collis Center
+collis-gov-board:Collis Governing Board
+commencement-96:Commencement Information
+commencement-student-staff:C&R Student Staff
+comp-blackboard:Computing - Blackboard
+comp-humanities:Computing - Humanities Computing
+comp-linux:Computing - Linux
+comp-lit:Comparative Literature
+comp-outages:Computing - Outages
+comp-sci-jobs:Computer Science Jobs and Internships
+comp-services:Computing - * Computing Services *
+comp-store:Computing - * Computer Sales and Service *
+composition-center:Composition Center
+computing-dartv:Computing - DarTv
+conferences-special-events:Conferences and Special Events
+controllers-office:Controller's Office
+convocation:Convocation Information
+coso:COSO - Council on Student Organizations
+council-computing:Council on Computing
+counseling-human-devel:Counseling and Human Development
+cs-majors:Computer Science Majors
+cuad:College Republicans
+culinary:DACA - Dartmouth Association of Culinary Arts
+d-col-prof-dev:Dean of College Professional Development
+dance-ensemble:Hopkins Center Dance Ensemble
+dance3:Dance, dance, dance
+dao:Dartmouth Asian Organization
+dapa:DAPA - Drug & Alcohol Peer Advisors
+darfur:Darfur Action Group
+dart-ems:Dartmouth EMS
+dart-recycles:Dartmouth Recycles
+dart-skiway:Dartmouth Skiway
+dart-tv:Dartmouth Television (DTV!)
+dartmouth-contemporary:The Dartmouth Contemporary (Book Review Journal)
+dc-greens:Dartmouth Progressives
+dcccc:Dartmouth College Child Care Center
+dcdt:Dartmouth Chinese Dance Troupe
+dcgh:Darmouth Coalition of Global Health (DCGH)
+dclu:Dartmouth Civil Liberties Union (DCLU)
+dcs-council:DCS Council Bulletin
+dcsa-trader:DCSA Trader
+ddm:Dartmouth Disorientation Movement (DDM)
+dhmc-cardiology:DHMC Cardiology
+dhmc-comp-svcs:DHMC Computer Services News
+dhmc-conf-room-mtgs:DHMC Daily Conference Room Mtgs
+dhmc-continuing-ed:DHMC Continuing Education Calendar
+dhmc-dept-pathology:DHMC Dept. of Pathology
+dhmc-dietary-update:DHMC Dietary Update
+dhmc-dining-room:DHMC Dining Room Menu
+dhmc-employ-assistance:DHMC Employee Assistance Program
+dhmc-health-improve-prog:DHMC HIP - Physician & Staff Health Improvement Program
+dhmc-jobs:DHMC Employment Opportunities
+dhmc-recycling:DHMC Recycling Program
+dhmc-trading-post:DHMC Trading Post
+dhmc-update-bargain:DHMC Update
+dhmc-volunteer-svcs:DHMC Volunteer Services
+dhmc-whrc:DHMC Women's Health Resource Center
+dhmc.expansion:DHMC Expansion
+dhmc.information-systems-outages:DHMC Information Systems Outages
+dhmc.jcaho-survey-updates:DHMC JCAHO Survey Updates
+dhmc.oncology.protocols:DHMC Oncology Protocols
+dhmc.spine-center:DHMC Spine Center
+dickey-endow:Dickey Center
+dihg:Dartmouth International Health Group
+dining-services:Dining Services
+dipac:DIPAC - Dartmouth Israel Public Awareness Committee
+displaced-theater-company:Displaced Theater Company
+diversity-deep:Diversity Deep Community
+diversity-peer-advisors:Diversity Peer Advisors
+diversity-peer-program:Diversity Peer Program
+diversity-reading:Diversity Reading Groups
+dlfp:Farm to Dartmouth
+dms-adm-stu-affairs:DMS Student Affairs
+dms-bridging-program:DMS Bridging Program
+dms-computing:DMS Computing
+dms-facilities:DMS Facilities
+dms-fin-aid-news:DMS Financial Aid News
+dms-min-affairs:DMS Multicultural Affairs
+dms-partners:DMS Partners
+dms-pharmtox-sem:Pharmacology-Toxicology
+dms-usmle:DMS USMLE
+dms-wellness-comm:DMS Wellness Committee
+doc-environ-stud:DOC Environmental Studies
+doc-out-prog:DOC and Outdoor Programs
+doc-trips:DOC Trips
+dof-ug-research:DOF Undergraduate Research
+dog-day-players:Dog Day Players
+dosc:DOSC
+drama-dept:Theater
+dressage:Dressage Team
+driver-safety:Driver Safety Program
+dsghp:Dartmouth Student Group Health Plan (DSGHP)
+dst:Delta Sigma Theta
+dwls:Daniel Webster Legal Society (DWLS)
+earth-sciences:Earth Sciences
+eco-update:ECO Update
+economic-equity-initiative:Economic Equity Initiative
+economics:Economics
+edgerton:The Edge (Edgerton House Episcopal Center)
+edpa:Eating Disorders Peer Advisors (EDPA)
+education-dept:Education Dept.
+education-research-participants:Education Research/Participants Needed
+eis:Employee Information Services
+electron-microscope:Electron Microscope Facility
+ems-emt:EMS-EMT, First Responder & Rescue Training
+eng-mem:Engineering - MEM
+engineering-placement:Engineering - Career Services
+english-majors:English Department
+engn-sci-dept:Engineering Sciences Department
+ent-network:Dartmouth Entrepreneurial Network
+environ-health-safety:Environmental Health and Safety
+environmental-studies:Environmental Studies Program (ENVS)
+ethics-institute:Ethics Institute
+eval-clinical-sciences:TDI Education
+eval-research:Evaluation and Research
+fac-employ-assistance:Faculty-Employee Assistance Program
+far-off-broadway:Far Off Broadway
+fast-food:FAST Food
+fieldstock:Fieldstock
+film-society:Film Society
+film-studies:Film Studies
+fin-aid:Financial Aid
+first-generation-network:First Generation Network
+flag:Dartmouth Flag
+flute-choir:Flute Choir
+formula-racing:Dartmouth Formula Racing
+free-food:Free Food
+french-club:French Club
+french-italian:French and Italian
+fusion-dance-team:FUSION Dance Ensemble
+gay-lesb-bi-concerns:Dartmouth LGBT Network
+gay-straight-alliance:Gender Sexuality XYZ
+genetics-dept:Genetics Department
+geography:Geography Department
+german:German Studies
+glb-program:Gay/Les/Bi/Trans Programming
+golden-key:Golden Key National Honor Society
+gospel-choir:Dartmouth College Gospel Choir
+gov-dept:Government Department
+grad-student-act:Graduate Student Activities
+gradresearch:Psychology Research/Participants Needed
+graduate-studies:Graduate Studies
+grants-contracts:Sponsored Projects
+grants-contracts-post-award:Sponsored Projects - Post-Award Topics
+greek-leadership:Greek Leadership Council
+green-lambda:Green Lambda - LGBTQA Grad Student Group
+habitat-humanity:Habitat for Humanity
+hanover-inn:Hanover Inn
+hap:Health Awareness Program
+harlequins:Harlequins - Musical Theater at Dartmouth
+history-classics:History & Classics Journal
+hood-museum:Hood Museum Events
+hop-student-workshops:Hopkins Center Student Workshops
+hopkins-ctr-evts:Hopkins Center Events
+hopkins-ctr-ushers:Hopkins Center Ushers
+hpv-educators:HPV Educators
+hr-staff-partnership:Dartmouth Staff Partnership
+human-resources:Human Resources
+human-resources-jobs:Human Resources Employment Opportunities
+human-subjects:Committee for the Protection of Human Subjects
+humanities-center:Humanities Center
+ias:IAS-Integrated Academic Support
+ilead-courses:ILEAD-Courses
+imago:IMAGO Media
+independent-forum:Dartmouth Independent Forum
+institute-health-policy:Institute for Health Policy & Clinical Practice
+inter-community-council:Inter-Community Council
+international-immigration:Visa Services
+internet-news:Computing - World Wide Web
+intl-grad-stu-mentoring:International Grad Student Mentoring
+intl-student-community:International Student Community
+intl-students-assoc:International Students Association
+irish-society:Irish Society
+ists:Institute for Security Technology Studies
+italian-club:Italian Club
+jacko:JACKO!
+jacksonville:Jacksonville ASB 2003
+japan-society:Dartmouth Japan Society
+jewish-life:Jewish Life
+jewish-studies-pgm:Jewish Studies Program
+jones-media-ctr:Jones Media Center
+judicial-affairs:Office of Undergraduate Judicial Affairs
+kasa:Korean American Students Association (KASA)
+katrina-help:Katrina Help
+kendo:Dartmouth Kendo
+koop-institute:Koop Institute
+kresge-cook-lib:Kresge Library/Cook Collection News
+la-alianza-latina:La Alianza Latina
+lambda-upsilon-lambda:Lambda Upsilon Lambda
+lang-resrc-cntr:Language Resource Center
+latin-amer-carib:Latin American - Latino - Caribbean Studies
+leadership-info:Leadership Information & Resources
+ledyard-canoe-club:Ledyard Canoe Club
+library-announce:Library Announcements
+library-digital:Library - Digital Resources
+link-up:Link Up
+lone-pine-tavern:Lone Pine Tavern
+lost-found:Lost & Found
+main-street:Main Street (Cross-cultural Magazine)
+mals:Master of Arts in Liberal Studies
+math-dept:Mathematics Department
+math-dept-computing:Mathematics Department Computing
+math-majors:Math Majors and Minors
+mcb-graduate-program:MCB Graduate Program
+mclaughlin-cluster:McLaughlin Cluster Construction Updates
+mecha:Movimiento Estudiantil Chicano de Aztlan
+medieval-enthusiasts:Medieval Enthusiasts at Dartmouth
+mens-project:Men's Project
+mentors-against-violence:Mentors Against Violence
+micro-immuno-sem:Microbiology and Immunology Department
+milan-south-asian-stu:Milan - South Asian Students
+miniversity:Miniversity
+montgomery-endowment:Montgomery Endowment
+morning-glory-fellowship:Morning Glory Community Fellowship
+mosaic:MOSAIC
+music-events:Music Events
+naacp:NAACP @ Dartmouth
+nanomaterials:Center for Nanomaterials Research at Dartmouth
+nathan-smith-society:Nathan Smith Premed Society
+native-amer-at-dartmouth:Native Americans at Dartmouth
+native-amer-prog:Native American Program
+native-amer-studies:Native American Studies Program
+neuroscience:Neuroscience Center at Dartmouth
+news-service:News/Public Affairs
+norris-cotton:Norris Cotton Cancer Center
+nsbe:NSBE-National Society of Black Engineers
+ocp:Off Campus Programs
+omega:Order of Omega
+organic-chemistry:Organic Chemistry
+organic-farm:Organic Farm
+orl-storage-info:ORL Storage Information
+pan-asian-council:Pan Asian Council (PAC)
+panarchy:Panarchy
+panhellenic-council:Panhellenic Council
+parking-ops:Parking and Transportation Services
+philosophy-dept:Philosophy Department
+photo-club:Photography Club
+physics-news-blurbs:Physics and Astronomy Department
+physiology-dept:Physiology Department
+pluralism:Pluralism and Leadership
+pprc:Pregnancy-Parenting Resources
+pride:PRIDE
+programming-board:Programming Board
+provision-christian-fellowship:Provision Christian Fellowship
+provost-office-announce:Provost Division Announcements
+psych-research-committee:Psychiatry Research Committee
+psychiatry-dept:Psychiatry Department
+psychology:Psychological and Brain Sciences
+ptsd:National Center for PTSD - Public
+public-programs:Public Programs
+purchasing:Procurement Services
+rape-aggress-def:Rape Aggression Defense
+rassias-fndtn:Rassias Foundation/ ALPs
+real-estate:Real Estate Office
+recruiting-prof-dev:Recruiting & Professional Development
+registrar:Registrar
+religion-dept:Religion Department
+religious-life:Religious Life
+rental-housing:Rental Housing
+reproductive-right:Students for Reproductive Rights
+res-ed:Foley House
+rideshare:RIDESHARE
+riding-center:Dartmouth Riding Center (Morton Farm)
+rock-ctr-stu-council:Rockefeller Center
+russian-club:Russian Club
+rwit:RWIT
+safe:SAFE (Students Against the Abuse of Food and Exercise)
+safety-awareness:Safety Awareness Tips
+safety-security:Safety and Security
+sci-div-elec-shop:Science Division Electronics Shop (SDES)
+sdc:Computing - Science Division Computing
+senior-gift-program:Senior Class Gift Program
+sexed-peer:Sexperts
+sexual-assault-peers:Sexual Abuse Peer Advisors
+shamis:Shamis
+shanti:Shanti
+sheba-dance-troupe:Sheba (Dance Troupe)
+singapura:Club Singapura
+sit-down-tragedy:Sit-Down Tragedy
+smoking-cessation:Smoking Cessation Resources
+soc-investment-economics:Dartmouth Society of Investment and Economics
+society-collegiate-scholars:National Society of Collegiate Scholars
+society-engineers:Thayer School - Dartmouth Society of Engineers
+society-women-engineers:Society of Women Engineers
+sociology:Sociology Department
+spanish-portuguese:Spanish and Portuguese
+spec-comm-stu:Special Community Students
+sports-broadcasting:Dartmouth Sports Broadcasting
+sr-symposium:Senior Symposium
+stargazers:Stargazers
+start:START  (Student Teachers in the ARTs)
+statistics:Computing - Statistics
+steppin-out:Tap Dancing - Steppin' Out
+stonefence:Stonefence
+stu-acct:Student Accounts Office
+stu-activities:Activities for Students
+stu-elections:Elections - Student
+stu-employ-notices:Student Employment - Student Updates/Notices
+stu-employ-policies:Student Employment - Policies and Procedures
+stu-employment:Student Employment - TempJob
+stu-housing-info:ORL - Student Housing Information
+stu-loans:Student Financial Services
+stu-org:Student Organization Information
+student-accessibility-services:Student Accessibility Services
+student-assembly-news:Student Assembly News & Information
+students-for-africa:Students For Africa
+students-free-tibet:Dartmouth Students for a Free Tibet
+studio-art:Studio Art
+support-staff-conference:Support Staff Conference
+sustainable:Sustainable Dartmouth
+swing-kids:Swing Kids
+tabard:The Tabard
+tae-kwon-do:Dartmouth Tae Kwon Do
+taiwanese-assoc:Dartmouth Taiwanese Association
+tang-soo-do:Integrated Martial Arts
+tech-reprints:Computing - Technology Reprints
+telephone-svcs:Telephone Services News
+test:Test Group
+tgif:Thank Goodness It's Friday
+thayer-school:Thayer School of Engineering
+thayer-school-comp:Thayer School Computing
+thayer-security:Thayer School Security
+the-independent:The Dartmouth Independent
+tolkien-society:The Dartmouth Tolkien Society
+top-10-environ:10 Top Environmental Updates
+trainer-sports-med:Trainers - Sports Medicine
+travel:Travel
+travel-health:Travel Health at Dick's House
+triple-helix:The Triple Helix
+tuck-school:Tuck School
+tucker-fellowships:Tucker Fellowships & Internships
+tucker-news:Tucker Foundation - News
+tucker-volunteer-proj:Tucker Volunteer Projects
+tutor-clearinghouse:Tutor Clearinghouse
+ujima:Ujima Dance Troupe
+undergrad-journal-science:Dartmouth Undergraduate Journal of Science
+university-seminar-elearning:University Seminar on ELearning
+unix:Computing - * Research Computing *
+upne:University Press of New England
+upperclass-deans:Undergraduate Deans Office
+vascular-seminars:Vascular Biology Seminars
+vegetarian:Dartmouth Vegetarian Alliance
+vietnamese-students:Vietnamese Student Association
+voces-clamantium:Voces Clamantium
+vox-of-dartmouth:VOX of Dartmouth (Newspaper)
+walking-club:Walking Club
+winter-carnival:Winter Carnival
+wisp:Women In Science Project
+women-in-business:Women in Business
+women-leadership:Women in Leadership
+women-of-color:Women of Color Collective
+womens-council:Women's Council
+womens-resource:Center for Women and Gender
+womens-studies-prog:Women's and Gender Studies Program
+wordthieves:Wordthieves
+world-affairs-council:World Affairs Council
+world-events:World Events Info/Resources
+wrestling-club:Wrestling Club
+writing-program:Writing Program
+yada-student-programs:YADA Student Programs
+young-democrats:Young Democrats
