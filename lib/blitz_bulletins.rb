@@ -2,6 +2,7 @@ require 'blitz_bulletins/cli'
 require 'blitz_bulletins/topics'
 require 'blitz_bulletins/topic'
 require 'blitz_bulletins/descriptions'
+require 'blitz_bulletins/posters'
 
 module BlitzBulletins
   @@topics = []
@@ -34,6 +35,10 @@ module BlitzBulletins
 
   def self.posters
     @@posters
+  end
+
+  def self.readlines(file)
+    IO.readlines(File.expand_path("data/#{file}.txt"))
   end
 
 end
