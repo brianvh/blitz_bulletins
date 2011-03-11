@@ -49,5 +49,29 @@ describe "Listing Blitz Bulletin topics" do
       end
     end
 
+    context "GIVEN: a description file for the two topics" do
+      before(:each) do
+        desc_file = %{topic-one:Topic One
+          topic-two:Topic Two
+          }.gsub(/^ {10}/, '')
+        write_file("data/descriptions.txt", desc_file)
+      end
+
+      context "WHEN: we run `bb-topics list --descriptions" do
+        before(:each) do
+          run_simple('bb-topics list --descriptions')
+        end
+
+        context "THEN: the output of the run" do
+          it "should begin with 'Topic One (topic-one): 01/01/2011'" do
+            all_output.should match(/^Topic One \(topic-one\): 01\/01\/2011/)
+          end
+
+          it "should end with 'Topic Two (topic-two): 02/01/2011'" do
+            all_output.should match(/Topic Two \(topic-two\): 02\/01\/2011$/)
+          end
+        end
+      end
+    end
   end
 end
