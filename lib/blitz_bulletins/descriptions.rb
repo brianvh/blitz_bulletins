@@ -8,7 +8,7 @@ module BlitzBulletins
 
     def parse_file
       readlines.each do |line|
-        name, desc = line.split(/:/)
+        name, desc = line.chomp.split(/:/)
         @hash[name] = desc
       end
     end
