@@ -3,7 +3,8 @@ module BlitzBulletins
   class Topics
     attr_reader :list
 
-    def initialize
+    def initialize(with_desc = false)
+      @descriptions = with_desc
       @list = []
     end
 
@@ -11,8 +12,12 @@ module BlitzBulletins
       readlines.each { |line| @list.push(topic_from_line(line)) }
     end
 
-    def self.load
-      topics = Topics.new
+    def descriptions?
+      @descriptions
+    end
+
+    def self.load(with_desc = false)
+      topics = Topics.new(with_desc = false)
       topics.parse_file
       topics.list
     end
@@ -20,7 +25,7 @@ module BlitzBulletins
     private
 
     def topic_from_line(line)
-      BlitzBulletins::Topic.from_line(line)
+      BlitzBulletins::Topic.from_line(line, descriptions?)
     end
 
     def readlines
