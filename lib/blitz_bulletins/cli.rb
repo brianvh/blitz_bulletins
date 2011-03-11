@@ -30,8 +30,8 @@ module BlitzBulletins
       date.nil? ? nil : Date.parse(date)
     end
 
-    def topics
-      BlitzBulletins.topics
+    def topics(with_desc = false)
+      BlitzBulletins.topics(with_desc = false)
     end
 
     def descriptions?

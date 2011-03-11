@@ -1,14 +1,15 @@
 require 'blitz_bulletins/cli'
 require 'blitz_bulletins/topics'
 require 'blitz_bulletins/topic'
+require 'blitz_bulletins/descriptions'
 
 module BlitzBulletins
   @@topics = []
   @@descriptions = {}
 
-  def self.load_topics
+  def self.load_topics(with_desc = false)
     return false unless @@topics.empty?
-    @@topics = BlitzBulletins::Topics.load and return true
+    @@topics = BlitzBulletins::Topics.load(with_desc = false) and return true
   end
 
   def self.load_descriptions
@@ -20,7 +21,7 @@ module BlitzBulletins
     @@descriptions
   end
 
-  def self.topics
+  def self.topics(with_desc = false)
     load_topics
     @@topics
   end
