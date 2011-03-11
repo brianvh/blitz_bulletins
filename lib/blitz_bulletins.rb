@@ -9,7 +9,7 @@ module BlitzBulletins
 
   def self.load_topics(with_desc = false)
     return false unless @@topics.empty?
-    @@topics = BlitzBulletins::Topics.load(with_desc = false) and return true
+    @@topics = BlitzBulletins::Topics.load(with_desc) and return true
   end
 
   def self.load_descriptions
@@ -22,7 +22,7 @@ module BlitzBulletins
   end
 
   def self.topics(with_desc = false)
-    load_topics
+    load_topics(with_desc)
     @@topics
   end
 

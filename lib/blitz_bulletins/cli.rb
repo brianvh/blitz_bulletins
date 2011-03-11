@@ -31,11 +31,11 @@ module BlitzBulletins
     end
 
     def topics(with_desc = false)
-      BlitzBulletins.topics(with_desc = false)
+      BlitzBulletins.topics(with_desc)
     end
 
     def descriptions?
-      BlitzBulletins.descriptions.empty?
+      !BlitzBulletins.descriptions.empty?
     end
 
     def load_descriptions

@@ -17,7 +17,7 @@ module BlitzBulletins
     end
 
     def self.load(with_desc = false)
-      topics = Topics.new(with_desc = false)
+      topics = Topics.new(with_desc)
       topics.parse_file
       topics.list
     end
