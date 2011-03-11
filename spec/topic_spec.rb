@@ -7,7 +7,7 @@ describe BlitzBulletins::Topic do
   end
 
   context "When creating a new instance" do
-    context "without a supplied date" do
+    context "without a date" do
       before(:each) do
         @topic = BlitzBulletins::Topic.new(@name)
       end
@@ -25,7 +25,7 @@ describe BlitzBulletins::Topic do
       end
     end
 
-    context "with a supplied date" do
+    context "with a date" do
       before(:each) do
         @topic = BlitzBulletins::Topic.new(@name, Date.parse(@date))
       end
@@ -33,6 +33,19 @@ describe BlitzBulletins::Topic do
       describe "#to_s" do
         it "returns the correct output" do
           @topic.to_s.should == 'topic-one: 01/01/2010'
+        end
+      end
+    end
+
+    context "with a date and description" do
+      before(:each) do
+        @topic = BlitzBulletins::Topic.new(@name, Date.parse(@date), true)
+        @topic.should_receive(:get_description).once.and_return("Topic One")
+      end
+
+      describe "#to_s" do
+        it "returns the correct output" do
+          @topic.to_s.should == 'Topic One (topic-one): 01/01/2010'
         end
       end
     end
