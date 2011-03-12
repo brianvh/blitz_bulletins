@@ -7,12 +7,15 @@ module BlitzBulletins
     method_option :before, :type => :string, :aliases => '-b'
     method_option :after, :type => :string, :aliases => '-a'
     method_option :descriptions, :type => :boolean, :aliases => '-d'
+    method_option :posters, :type => :boolean, :aliases => '-p'
     def list
       load_descriptions
+      load_posters
       topics(descriptions?).each do |t|
         next unless t.before?(before)
         next unless t.after?(after)
         puts t
+        posters_for_topic(t.name) if posters?
       end
     end
 
@@ -40,6 +43,22 @@ module BlitzBulletins
 
     def load_descriptions
       BlitzBulletins.load_descriptions if options[:descriptions]
+    end
+
+    def posters_for_topic(name)
+      posters.in_topic[name].each { |p| puts p.name_indented unless p.expired?}
+    end
+
+    def posters?
+      !BlitzBulletins.posters.nil?
+    end
+
+    def posters
+      BlitzBulletins.posters
+    end
+
+    def load_posters
+      BlitzBulletins.load_posters if options[:posters]
     end
   end
 end
