@@ -7,4 +7,6 @@ Dir[support_path].each {|f| require f}
 
 RSpec.configure do |config|
   config.mock_with :rspec
+
+  config.include PostersHelper
 end
