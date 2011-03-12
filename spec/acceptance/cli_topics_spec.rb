@@ -73,5 +73,30 @@ describe "Listing Blitz Bulletin topics" do
         end
       end
     end
+
+    context "GIVEN: a file of posters for the two topics" do
+      before(:each) do
+        posters_file = %{50843:dartmouth.bulletins.topic-one
+          57794:dartmouth.bulletins.topic-two
+          }.gsub(/^ {10}/, '')
+        write_file("data/posters.txt", posters_file)
+      end
+
+      context "WHEN: we run `bb-topics list --posters" do
+        before(:each) do
+          run_simple('bb-topics list --posters')
+        end
+
+        context "THEN: the output of the run" do
+          it "should contain 'Webmaster'" do
+            all_output.should match(/^    Webmaster/)
+          end
+
+          it "should end with 'Bulletin Administration'" do
+            all_output.should match(/    Bulletin Administration$/)
+          end
+        end
+      end
+    end
   end
 end
