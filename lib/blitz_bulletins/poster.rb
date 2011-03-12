@@ -1,3 +1,5 @@
+require 'net/dnd'
+
 module BlitzBulletins
   class Poster
     attr_reader :uid
@@ -23,7 +25,8 @@ module BlitzBulletins
     private
 
     def profile
-      @profile ||= lookup
+      lookup if @profile.nil?
+      @profile
     end
 
     private
