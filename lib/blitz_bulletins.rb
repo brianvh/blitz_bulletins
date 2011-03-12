@@ -10,7 +10,7 @@ require 'blitz_bulletins/poster'
 module BlitzBulletins
   @@topics = []
   @@descriptions = {}
-  @@posters = {}
+  @@posters = nil
 
   def self.load_topics(with_desc = false)
     return false unless @@topics.empty?
@@ -32,7 +32,7 @@ module BlitzBulletins
   end
 
   def self.load_posters
-    return false unless @@posters.empty?
+    return false unless @@posters.nil?
     @@posters = BlitzBulletins::Posters.load and return true
   end
 
