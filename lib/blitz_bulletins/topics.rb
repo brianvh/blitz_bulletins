@@ -9,7 +9,7 @@ module BlitzBulletins
     end
 
     def parse_file
-      readlines.each { |line| @list.push(topic_from_line(line)) }
+      readlines.each { |line| @list.push(topic_from_line(line.chomp)) }
     end
 
     def descriptions?
