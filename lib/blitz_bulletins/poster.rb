@@ -25,16 +25,17 @@ module BlitzBulletins
     private
 
     def profile
-      lookup if @profile.nil?
-      @profile
+      @profile ||= lookup
     end
 
     private
 
     def lookup
+      dnd_prof = nil
       Net::DartmouthDND.start(%w(name expires)) do |dnd|
-        @profile = dnd.find(uid, :one)
+        dnd_prof = dnd.find(uid, :one)
       end
+      dnd_prof
     end
 
     def has_expired?
