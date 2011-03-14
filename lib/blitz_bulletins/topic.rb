@@ -1,7 +1,7 @@
 module BlitzBulletins
 
   class Topic
-    attr_reader :date
+    attr_reader :name, :date
 
     def initialize(name, date=Date.today, with_desc = false)
       @name = name
@@ -11,7 +11,7 @@ module BlitzBulletins
     end
 
     def to_s
-      "#{name}: #{short_date}"
+      "#{full_name}: #{short_date}"
     end
 
     def before?(before)
@@ -22,8 +22,8 @@ module BlitzBulletins
       after.nil? ? true : date >= after
     end
 
-    def name
-      description.nil? ? @name : "#{description} (#{@name})"
+    def full_name
+      description.nil? ? name : "#{description} (#{name})"
     end
 
     def description
@@ -48,7 +48,7 @@ module BlitzBulletins
     end
 
     def get_description
-      description? ? BlitzBulletins.descriptions[@name] : nil
+      description? ? BlitzBulletins.descriptions[name] : nil
     end
   end
 
