@@ -9,10 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Brian V. Hughes"]
   s.email       = ["brianvh@dartmouth.edu"]
   s.homepage    = ""
-  s.summary     = %q(#{s.name}-#{s.version})
-  s.description = %q{Parsing BlitzMail Bulletins data files to extract lists of topics and posters.}
-
-  s.rubyforge_project = "blitz_bulletins"
+  s.summary     = %(#{s.name}-#{s.version})
+  s.description = %{Parsing BlitzMail Bulletins data files to extract lists of topics and posters.}
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
