@@ -6,11 +6,11 @@ Gem::Specification.new do |s|
   s.name        = "blitz_bulletins"
   s.version     = BlitzBulletins::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["TODO: Write your name"]
-  s.email       = ["TODO: Write your email address"]
+  s.authors     = ["Brian V. Hughes"]
+  s.email       = ["brianvh@dartmouth.edu"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q(#{s.name}-#{s.version})
+  s.description = %q{Parsing BlitzMail Bulletins data files to extract lists of topics and posters.}
 
   s.rubyforge_project = "blitz_bulletins"
 
