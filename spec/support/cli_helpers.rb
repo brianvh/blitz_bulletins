@@ -1,7 +1,7 @@
 module CLIHelpers
 
   def set_descriptions(descs)
-    write_data_file(:descriptions, descriptions)
+    write_data_file(:descriptions, descs)
   end
 
   def set_posters(posters)
