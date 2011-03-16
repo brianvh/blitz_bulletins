@@ -18,6 +18,10 @@ module BlitzBulletins
       profile.nil? ? nil : profile.name
     end
 
+    def email
+      profile.nil? ? nil : profile.email
+    end
+
     def name_indented
       "    #{name}"
     end
@@ -32,7 +36,7 @@ module BlitzBulletins
 
     def lookup
       dnd_prof = nil
-      Net::DartmouthDND.start(%w(name expires)) do |dnd|
+      Net::DartmouthDND.start(%w(name email expires)) do |dnd|
         dnd_prof = dnd.find(uid, :one)
       end
       dnd_prof
