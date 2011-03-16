@@ -19,6 +19,30 @@ module BlitzBulletins
       end
     end
 
+    desc "csv", "Output topics list in CSV format"
+    method_option :before, :type => :string, :aliases => '-b'
+    method_option :after, :type => :string, :aliases => '-a'
+    method_option :descriptions, :type => :boolean, :aliases => '-d'
+    method_option :posters, :type => :boolean, :aliases => '-p'
+    def csv
+      load_descriptions
+      load_posters
+      topics(descriptions?).each do |t|
+        next unless t.before?(before)
+        next unless t.after?(after)
+        line = t.to_csv
+        if posters?
+          posters.in_topic[name].each do |p|
+            next if p.expired?
+            line << p.email
+            puts line.join(', ')
+          end
+        else
+          puts line.join(', ')
+        end
+      end
+    end
+
     private
 
     def before
