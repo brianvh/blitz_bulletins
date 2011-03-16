@@ -3,15 +3,12 @@ require 'acceptance/acceptance_helper'
 describe "Listing Blitz Bulletin topics" do
   context "GIVEN: a topics file with 2 topics" do
     before(:each) do
-      topics_file = %{Jan  1 04:02 topic-one
-        Feb  1 04:02 topic-two
-        }.gsub(/^ {8}/, '')
-      write_file("data/topics.txt", topics_file)
+      set_topics(['Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two'])
     end
 
-    context "WHEN: we run `bb-topics list`" do
+    context "WHEN: we run `bb-topics list --format=plain`" do
       before(:each) do
-        run_simple('bb-topics list')
+        run_simple('bb-topics list --format=plain')
       end
 
       context "THEN: the output of the command" do
@@ -21,6 +18,22 @@ describe "Listing Blitz Bulletin topics" do
 
         it "should end with 'topic-two: 02/01/2011'" do
           all_output.should match(/topic-two: 02\/01\/2011$/)
+        end
+      end
+    end
+
+    context "WHEN: we run `bb-topics list --format=csv`" do
+      before(:each) do
+        run_simple('bb-topics list --format=csv')
+      end
+
+      context "THEN: the output of the command" do
+        it "should begin with 'topic-one, 01/01/2011'" do
+          all_output.should match(/^topic-one, 01\/01\/2011/)
+        end
+
+        it "should end with 'topic-two, 02/01/2011'" do
+          all_output.should match(/topic-two, 02\/01\/2011$/)
         end
       end
     end
@@ -111,6 +124,22 @@ describe "Listing Blitz Bulletin topics" do
 
           it "should end with 'Bulletin Administration'" do
             all_output.should match(/    Bulletin Administration$/)
+          end
+        end
+      end
+
+      context "WHEN: we run `bb-topic list -p -d -f=csv" do
+        before(:each) do
+          run_simple('bb-topics list -p -d -f=csv')
+        end
+
+        context "THEN: the output of the run" do
+          it "should start with 'Topic One, topic-one, 01/01/2011, Webmaster@Dartmouth.EDU'" do
+            all_output.should match(/^Topic One, topic-one, 01\/01\/2011, Webmaster@Dartmouth\.EDU/)
+          end
+
+          it "should end with 'Topic Two, topic-two, 02/01/2011, Bulletin.Administration@Dartmouth.EDU'" do
+            all_output.should match(/Topic Two, topic-two, 02\/01\/2011, Bulletin\.Administration@Dartmouth\.EDU$/)
           end
         end
       end

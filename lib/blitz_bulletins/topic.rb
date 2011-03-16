@@ -14,6 +14,10 @@ module BlitzBulletins
       "#{full_name}: #{short_date}"
     end
 
+    def to_csv
+      [description, name, short_date].compact
+    end
+
     def before?(before)
       before.nil? ? true : date < before
     end
