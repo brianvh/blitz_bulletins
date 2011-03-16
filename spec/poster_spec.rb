@@ -32,6 +32,10 @@ describe BlitzBulletins::Poster do
     it "has the correct name" do
       @poster.name.should == @profile.name
     end
+
+    it "has the correct email" do
+      @poster.email.should == "#{@profile.name.gsub(' ', '.')}@dartmouth.edu"
+    end
   end
 
   context "When the uid is for an active DND entry" do

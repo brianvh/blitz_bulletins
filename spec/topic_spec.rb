@@ -35,6 +35,12 @@ describe BlitzBulletins::Topic do
           @topic.to_s.should == 'topic-one: 01/01/2010'
         end
       end
+
+      describe "#to_csv" do
+        it "returns the correct array" do
+          @topic.to_csv.should == ['topic-one', '01/01/2010']
+        end
+      end
     end
 
     context "with a date and description" do
@@ -46,6 +52,12 @@ describe BlitzBulletins::Topic do
       describe "#to_s" do
         it "returns the correct output" do
           @topic.to_s.should == 'Topic One (topic-one): 01/01/2010'
+        end
+      end
+
+      describe "#to_csv" do
+        it "returns the correct array" do
+          @topic.to_csv.should == ['Topic One', 'topic-one', '01/01/2010']
         end
       end
     end

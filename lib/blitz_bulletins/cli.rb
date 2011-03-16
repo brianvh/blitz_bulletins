@@ -8,18 +8,44 @@ module BlitzBulletins
     method_option :after, :type => :string, :aliases => '-a'
     method_option :descriptions, :type => :boolean, :aliases => '-d'
     method_option :posters, :type => :boolean, :aliases => '-p'
+    method_option :format, :type => :string, :default => 'plain', :aliases => '-f'
     def list
       load_descriptions
       load_posters
       topics(descriptions?).each do |t|
         next unless t.before?(before)
         next unless t.after?(after)
-        puts t
-        posters_for_topic(t.name) if posters?
+        send("output_#{options[:format]}", t)
       end
     end
 
     private
+
+    def output_plain(topic)
+      puts topic
+      posters_for_topic(topic.name) if posters?
+    end
+
+    def output_csv(topic)
+      line = topic.to_csv
+      if posters?
+        posters_for_topic(topic.name, line)
+      else
+        puts line.join(', ')
+      end
+    end
+
+    def posters_for_topic(name, line=nil)
+      posters.in_topic[name].each do |p|
+        next if p.expired?
+        if line.nil?
+          puts p.name_indented
+        else
+          out = line + [p.email]
+          puts out.join(', ')
+        end
+      end
+    end
 
     def before
       @before ||= parse_date(options[:before])
@@ -43,10 +69,6 @@ module BlitzBulletins
 
     def load_descriptions
       BlitzBulletins.load_descriptions if options[:descriptions]
-    end
-
-    def posters_for_topic(name)
-      posters.in_topic[name].each { |p| puts p.name_indented unless p.expired?}
     end
 
     def posters?
