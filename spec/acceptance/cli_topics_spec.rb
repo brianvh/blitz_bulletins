@@ -3,7 +3,7 @@ require 'acceptance/acceptance_helper'
 describe "Listing Blitz Bulletin topics" do
   context "GIVEN: a topics file with 2 topics" do
     before(:each) do
-      set_topics('Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two')
+      set_topics(['Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two'])
     end
 
     context "WHEN: we run `bb-topics list`" do
@@ -133,6 +133,29 @@ describe "Outputting CSV formatted topics" do
 
         it "should end with 'topic-two, 02/01/2011'" do
           all_output.should match(/topic-two, 02\/01\/2011$/)
+        end
+      end
+    end
+
+    context "GIVEN: descriptions and posters files" do
+      before(:each) do
+        set_descriptions(['topic-one:Topic One', 'topic-two:Topic Two'])
+        set_posters(['50843:dartmouth.bulletins.topic-one', '57794:dartmouth.bulletins.topic-two'])
+      end
+
+      context "WHEN: we run `bb-topic csv -p -d" do
+        before(:each) do
+          run_simple('bb-topics csv -p -d')
+        end
+
+        context "THEN: the output of the run" do
+          it "should start with 'Topic One, topic-one, 01/01/2011, Webmaster@Dartmouth.EDU'" do
+            all_output.should match(/^Topic One, topic-one, 01\/01\/2011, Webmaster@Dartmouth\.EDU/)
+          end
+
+          it "should end with 'Topic Two, topic-two, 02/01/2011, Bulletin.Administration@Dartmouth.EDU'" do
+            all_output.should match(/Topic Two, topic-two, 02\/01\/2011, Bulletin\.Administration@Dartmouth\.EDU$/)
+          end
         end
       end
     end

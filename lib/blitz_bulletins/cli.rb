@@ -32,7 +32,7 @@ module BlitzBulletins
         next unless t.after?(after)
         line = t.to_csv
         if posters?
-          posters.in_topic[name].each do |p|
+          posters.in_topic[t.name].each do |p|
             next if p.expired?
             line << p.email
             puts line.join(', ')
