@@ -6,9 +6,9 @@ describe "Listing Blitz Bulletin topics" do
       set_topics(['Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two'])
     end
 
-    context "WHEN: we run `bb-topics list`" do
+    context "WHEN: we run `bb-topics list --format=plain`" do
       before(:each) do
-        run_simple('bb-topics list')
+        run_simple('bb-topics list --format=plain')
       end
 
       context "THEN: the output of the command" do
@@ -18,6 +18,22 @@ describe "Listing Blitz Bulletin topics" do
 
         it "should end with 'topic-two: 02/01/2011'" do
           all_output.should match(/topic-two: 02\/01\/2011$/)
+        end
+      end
+    end
+
+    context "WHEN: we run `bb-topics list --format=csv`" do
+      before(:each) do
+        run_simple('bb-topics list --format=csv')
+      end
+
+      context "THEN: the output of the command" do
+        it "should begin with 'topic-one, 01/01/2011'" do
+          all_output.should match(/^topic-one, 01\/01\/2011/)
+        end
+
+        it "should end with 'topic-two, 02/01/2011'" do
+          all_output.should match(/topic-two, 02\/01\/2011$/)
         end
       end
     end
@@ -111,41 +127,10 @@ describe "Listing Blitz Bulletin topics" do
           end
         end
       end
-    end
-  end
-end
 
-describe "Outputting CSV formatted topics" do
-  context "GIVEN: a topics file with 2 topics" do
-    before(:each) do
-      set_topics(['Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two'])
-    end
-
-    context "WHEN: we run `bb-topics csv`" do
-      before(:each) do
-        run_simple('bb-topics csv')
-      end
-
-      context "THEN: the output of the command" do
-        it "should begin with 'topic-one, 01/01/2011'" do
-          all_output.should match(/^topic-one, 01\/01\/2011/)
-        end
-
-        it "should end with 'topic-two, 02/01/2011'" do
-          all_output.should match(/topic-two, 02\/01\/2011$/)
-        end
-      end
-    end
-
-    context "GIVEN: descriptions and posters files" do
-      before(:each) do
-        set_descriptions(['topic-one:Topic One', 'topic-two:Topic Two'])
-        set_posters(['50843:dartmouth.bulletins.topic-one', '57794:dartmouth.bulletins.topic-two'])
-      end
-
-      context "WHEN: we run `bb-topic csv -p -d" do
+      context "WHEN: we run `bb-topic list -p -d -f=csv" do
         before(:each) do
-          run_simple('bb-topics csv -p -d')
+          run_simple('bb-topics list -p -d -f=csv')
         end
 
         context "THEN: the output of the run" do
