@@ -18,6 +18,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_dependency 'thor', '~> 0.14.6'
+  s.add_dependency 'net-dnd', '~> 1.1.2'
 
   s.add_development_dependency 'bundler', '~> 1.0.10'
   s.add_development_dependency 'rspec', '~> 2.5.0'
