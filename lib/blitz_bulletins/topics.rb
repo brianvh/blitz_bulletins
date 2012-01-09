@@ -3,33 +3,38 @@ module BlitzBulletins
   class Topics
     attr_reader :list
 
-    def initialize(with_desc = false)
+    def initialize(lines=[], with_desc = false)
       @descriptions = with_desc
       @list = []
+      parse(lines)
     end
 
-    def parse_file
-      readlines.each { |line| @list.push(topic_from_line(line.chomp)) }
+    def parse(lines=[])
+      lines.each { |line| @list.push(topic_from_line(line.chomp)) }
     end
 
     def descriptions?
       @descriptions
     end
 
-    def self.load(with_desc = false)
-      topics = Topics.new(with_desc)
-      topics.parse_file
-      topics.list
-    end
-
     private
 
     def topic_from_line(line)
-      BlitzBulletins::Topic.from_line(line, descriptions?)
+      mon, day, year, name = parse_line(line)
+      attribs = {:name => name, :date => Date.parse("#{mon} #{day} #{year}") }
+      attribs[:description] = get_description(name) if descriptions?
+      Topic.new(attribs)
     end
 
-    def readlines
-      IO.readlines(File.expand_path('data/topics.txt'))
+    def parse_line(line)
+      pat = /^(...) +(\d+) +(\d\d:?\d\d) (.+)$/
+      parts = pat.match(line).to_a[1..-1]
+      parts[2] = Date.today.year if /:/ === parts[2]
+      parts
+    end
+
+    def get_description(name)
+      BlitzBulletins.descriptions[name]
     end
   end
 
