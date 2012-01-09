@@ -10,16 +10,17 @@ require 'blitz_bulletins/poster'
 module BlitzBulletins
   @@topics = []
   @@descriptions = {}
+  @@subscribers = {}
   @@posters = nil
 
-  def self.load_topics(with_desc = false)
+  def self.load_topics(with_desc = false, with_subs = false)
     return false unless @@topics.empty?
     @@topics = Topics.new(readlines('topics'), with_desc).list
     return true
   end
 
-  def self.topics(with_desc = false)
-    load_topics(with_desc)
+  def self.topics(with_desc = false, with_subs = false)
+    load_topics(with_desc, with_subs)
     @@topics
   end
 
@@ -31,6 +32,16 @@ module BlitzBulletins
 
   def self.descriptions
     @@descriptions
+  end
+
+  def self.load_subscribers
+    return false unless @@subscribers.empty?
+    @@subscribers = Subscribers.new(readlines('subscribers')).hash
+    return true
+  end
+
+  def self.subscribers
+    @@subscribers
   end
 
   def self.load_posters
