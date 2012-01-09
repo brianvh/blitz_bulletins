@@ -3,7 +3,7 @@ require 'acceptance/acceptance_helper'
 describe "Listing Blitz Bulletin topics" do
   context "GIVEN: a topics file with 2 topics" do
     before(:each) do
-      set_topics(['Jan  1 04:02 topic-one', 'Feb  1 04:02 topic-two'])
+      set_topics(['Jan  1 2011 topic-one', 'Feb  1 2011 topic-two'])
     end
 
     context "WHEN: we run `bb-topics list --format=plain`" do
