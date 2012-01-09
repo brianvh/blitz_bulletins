@@ -6,9 +6,7 @@ describe BlitzBulletins::Descriptions do
       @topic1 = {:name => 'topic-one', :description => 'Topic One'}
       @topic2 = {:name => 'topic-two', :description => 'Topic Two'}
       descriptions = ["#{@topic1[:name]}:#{@topic1[:description]}", "#{@topic2[:name]}:#{@topic2[:description]}"]
-      @descriptions = BlitzBulletins::Descriptions.new
-      @descriptions.should_receive(:readlines).once.and_return(descriptions)
-      @descriptions.parse_file
+      @descriptions = BlitzBulletins::Descriptions.new(descriptions)
     end
 
     describe "#hash" do
