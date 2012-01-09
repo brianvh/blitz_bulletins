@@ -14,7 +14,8 @@ module BlitzBulletins
 
   def self.load_topics(with_desc = false)
     return false unless @@topics.empty?
-    @@topics = BlitzBulletins::Topics.load(with_desc) and return true
+    @@topics = Topics.new(readlines('topics'), with_desc).list
+    return true
   end
 
   def self.topics(with_desc = false)
@@ -24,7 +25,8 @@ module BlitzBulletins
 
   def self.load_descriptions
     return false unless @@descriptions.empty?
-    @@descriptions = BlitzBulletins::Descriptions.load and return true
+    @@descriptions = Descriptions.new(readlines('descriptions')).hash
+    return true
   end
 
   def self.descriptions
@@ -33,7 +35,8 @@ module BlitzBulletins
 
   def self.load_posters
     return false unless @@posters.nil?
-    @@posters = BlitzBulletins::Posters.load and return true
+    @@posters = Posters.new(readlines('posters'))
+    return true
   end
 
   def self.posters
