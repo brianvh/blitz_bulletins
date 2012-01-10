@@ -29,4 +29,20 @@ describe BlitzBulletins::Topic do
     its(:to_csv) { should == ['Topic One', 'topic-one', '01/01/2010'] }
   end
 
+  context "Created with a date and 1 subscriber" do
+    let(:attribs) { {:name => name, :date => date,
+                      :subscribers => 1} }
+
+    its(:to_s) { should == 'topic-one: 01/01/2010 -- 1 subscriber' }
+    its(:to_csv) { should == ['topic-one', '01/01/2010', 1] }
+  end
+
+  context "Created with a date, description and multiple subscribers" do
+    let(:attribs) { {:name => name, :date => date,
+                      :description => "Topic One", :subscribers => 2} }
+
+    its(:to_s) { should == 'Topic One (topic-one): 01/01/2010 -- 2 subscribers' }
+    its(:to_csv) { should == ['Topic One', 'topic-one', '01/01/2010', 2] }
+  end
+
 end

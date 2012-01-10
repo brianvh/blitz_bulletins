@@ -7,12 +7,14 @@ module BlitzBulletins
     method_option :before, :type => :string, :aliases => '-b'
     method_option :after, :type => :string, :aliases => '-a'
     method_option :descriptions, :type => :boolean, :aliases => '-d'
+    method_option :subscribers, :type => :boolean, :aliases => '-s'
     method_option :posters, :type => :boolean, :aliases => '-p'
     method_option :format, :type => :string, :default => 'plain', :aliases => '-f'
     def list
       load_descriptions
+      load_subscribers
       load_posters
-      topics(descriptions?).each do |t|
+      topics(descriptions?, subscribers?).each do |t|
         next unless t.before?(before)
         next unless t.after?(after)
         send("output_#{options[:format]}", t)
@@ -59,8 +61,8 @@ module BlitzBulletins
       date.nil? ? nil : Date.parse(date)
     end
 
-    def topics(with_desc = false)
-      BlitzBulletins.topics(with_desc)
+    def topics(with_desc = false, with_subs = false)
+      BlitzBulletins.topics(with_desc, with_subs)
     end
 
     def descriptions?
@@ -69,6 +71,14 @@ module BlitzBulletins
 
     def load_descriptions
       BlitzBulletins.load_descriptions if options[:descriptions]
+    end
+
+    def subscribers?
+      !BlitzBulletins.subscribers.empty?
+    end
+
+    def load_subscribers
+      BlitzBulletins.load_subscribers if options[:subscribers]
     end
 
     def posters?
