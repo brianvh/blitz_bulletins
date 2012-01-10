@@ -16,7 +16,7 @@ module BlitzBulletins
 
   def self.load_topics(with_desc = false, with_subs = false)
     return false unless @@topics.empty?
-    @@topics = Topics.new(readlines('topics'), with_desc).list
+    @@topics = Topics.new(readlines('topics'), with_desc, with_subs).list
     return true
   end
 
