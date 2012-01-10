@@ -4,6 +4,10 @@ module CLIHelpers
     write_data_file(:descriptions, descs)
   end
 
+  def set_subscribers(subs)
+    write_data_file(:subscribers, subs)
+  end
+
   def set_posters(posters)
     write_data_file(:posters, posters)
   end

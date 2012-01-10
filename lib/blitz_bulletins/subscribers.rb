@@ -1,5 +1,5 @@
 module BlitzBulletins
-  class Descriptions
+  class Subscribers
     attr_reader :hash
 
     def initialize(lines=[])
@@ -9,8 +9,8 @@ module BlitzBulletins
 
     def parse(lines=[])
       lines.each do |line|
-        name, desc = line.chomp.split(/:/)
-        @hash[name] = desc
+        name, count = line.chomp.split(/:/)
+        @hash[name] = count.to_i
       end
     end
   end

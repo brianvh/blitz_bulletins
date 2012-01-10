@@ -1,77 +1,48 @@
 require 'spec_helper'
 
 describe BlitzBulletins::Topic do
-  before(:each) do
-    @name = 'topic-one'
-    @date = 'Jan  1 2010'
+  let(:name) { 'topic-one' }
+  let(:date) { Date.parse('Jan  1 2010') }
+
+  subject { BlitzBulletins::Topic.new(attribs) }
+
+  context "Created without a date" do
+    let(:attribs) { {:name => name} }
+
+    its(:name) { should == name }
+    its(:short_date) { should == Date.today.strftime("%m/%d/%Y") }
+
   end
 
-  context "When creating a new instance" do
-    context "without a date" do
-      before(:each) do
-        @topic = BlitzBulletins::Topic.new(@name)
-      end
+  context "Created with a date" do
+    let(:attribs) { {:name => name, :date => date} }
 
-      describe "#name" do
-        it "returns the correct name" do
-          @topic.name.should == @name
-        end
-      end
-
-      describe "#date" do
-        it "returns today as the date" do
-          @topic.date.should == Date.today
-        end
-      end
-    end
-
-    context "with a date" do
-      before(:each) do
-        @topic = BlitzBulletins::Topic.new(@name, Date.parse(@date))
-      end
-
-      describe "#to_s" do
-        it "returns the correct output" do
-          @topic.to_s.should == 'topic-one: 01/01/2010'
-        end
-      end
-
-      describe "#to_csv" do
-        it "returns the correct array" do
-          @topic.to_csv.should == ['topic-one', '01/01/2010']
-        end
-      end
-    end
-
-    context "with a date and description" do
-      before(:each) do
-        @topic = BlitzBulletins::Topic.new(@name, Date.parse(@date), true)
-        @topic.should_receive(:get_description).once.and_return("Topic One")
-      end
-
-      describe "#to_s" do
-        it "returns the correct output" do
-          @topic.to_s.should == 'Topic One (topic-one): 01/01/2010'
-        end
-      end
-
-      describe "#to_csv" do
-        it "returns the correct array" do
-          @topic.to_csv.should == ['Topic One', 'topic-one', '01/01/2010']
-        end
-      end
-    end
+    its(:to_s) { should == 'topic-one: 01/01/2010' }
+    its(:to_csv) { should == ['topic-one', '01/01/2010'] }
   end
 
-  context "When parsing a line from a topics file" do
-    before(:each) do
-      @topic = BlitzBulletins::Topic.from_line("#{@date} #{@name}")
-    end
+  context "Created with a date and description" do
+    let(:attribs) { {:name => name, :date => date,
+                      :description => "Topic One"} }
 
-    describe "#to_s" do
-      it "returns the correct output" do
-        @topic.to_s.should == 'topic-one: 01/01/2010'
-      end
-    end
+    its(:to_s) { should == 'Topic One (topic-one): 01/01/2010' }
+    its(:to_csv) { should == ['Topic One', 'topic-one', '01/01/2010'] }
   end
+
+  context "Created with a date and 1 subscriber" do
+    let(:attribs) { {:name => name, :date => date,
+                      :subscribers => 1} }
+
+    its(:to_s) { should == 'topic-one: 01/01/2010 -- 1 subscriber' }
+    its(:to_csv) { should == ['topic-one', '01/01/2010', 1] }
+  end
+
+  context "Created with a date, description and multiple subscribers" do
+    let(:attribs) { {:name => name, :date => date,
+                      :description => "Topic One", :subscribers => 2} }
+
+    its(:to_s) { should == 'Topic One (topic-one): 01/01/2010 -- 2 subscribers' }
+    its(:to_csv) { should == ['Topic One', 'topic-one', '01/01/2010', 2] }
+  end
+
 end
