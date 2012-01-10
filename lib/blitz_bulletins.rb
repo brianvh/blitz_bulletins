@@ -4,6 +4,7 @@ require 'blitz_bulletins/cli'
 require 'blitz_bulletins/topics'
 require 'blitz_bulletins/topic'
 require 'blitz_bulletins/descriptions'
+require 'blitz_bulletins/subscribers'
 require 'blitz_bulletins/posters'
 require 'blitz_bulletins/poster'
 
